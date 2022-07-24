@@ -55,7 +55,7 @@ public class ProjectController {
             statement.setString(1, project.getName());
             statement.setString(2, project.getDescription());
             statement.setDate(3, new Date(project.getCreatedAt().getTime()));
-            statement.setDate(4, new Date(project.getUpdatedAt().getTime()));
+            statement.setDate(4, new Date(new java.util.Date().getTime()));
             statement.setInt(5, project.getId());
             statement.execute();
         } catch (Exception ex) {
