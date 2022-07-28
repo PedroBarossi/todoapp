@@ -12,3 +12,7 @@ Interface gráfica desenvolvida com JFrame no NetBeans.
 Ícone *plus*: <a href="https://www.flaticon.com/free-icons/add" title="add icons">Add icons created by Pixel perfect - Flaticon</a>
 
 Ícone *clipboard*: <a href="https://www.flaticon.com/free-icons/list" title="list icons">List icons created by Kiranshastry - Flaticon</a>
+
+Ícone *delete*: <a href="https://www.flaticon.com/free-icons/delete" title="delete icons">Delete icons created by Kiranshastry - Flaticon</a>
+
+Ícone *edit:* <a href="https://www.flaticon.com/free-icons/edit" title="edit icons">Edit icons created by Kiranshastry - Flaticon</a>

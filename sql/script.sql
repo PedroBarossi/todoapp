@@ -20,3 +20,5 @@ create table tasks (
 );
 alter table tasks add constraint fk_projects foreign key (idProject) references projects(id)
 on delete cascade on update cascade;
+create user 'todoappadmin'@'localhost' IDENTIFIED BY 'admin';
+grant all privileges on todoapp.* to 'todoappadmin'@'localhost';

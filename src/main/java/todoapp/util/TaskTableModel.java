@@ -46,10 +46,8 @@ public class TaskTableModel extends AbstractTableModel {
                 return dateFormat.format(tasks.get(rowIndex).getDeadline());
             case 3:
                 return tasks.get(rowIndex).isCompleted();
-            case 4:
+            case 4,5:
                 return "";
-            case 5:
-                return "d";
             default:
                 return "s";
         }
