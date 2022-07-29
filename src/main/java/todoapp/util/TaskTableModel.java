@@ -61,7 +61,7 @@ public class TaskTableModel extends AbstractTableModel {
     //para poder marcar se a tarefa foi completada (1)
     @Override
     public boolean isCellEditable(int rowIndex, int columnIndex){
-        return columnIndex==3;
+        return (columnIndex==3);
     }
 
     //para poder marcar se a tarefa foi completada (2)

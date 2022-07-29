@@ -181,24 +181,29 @@ public class TaskDialogScreen extends javax.swing.JDialog {
     private void jLabelToolbarSaveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelToolbarSaveMouseClicked
         
         try{
-            Task task = new Task();
+            if(!jTextFieldName.getText().isEmpty() && !jFormattedTextFieldDeadline.getText().isEmpty()){
+                Task task = new Task();
 
-            task.setIdProject(project.getId());
+                task.setIdProject(project.getId());
 
-            task.setName(jTextFieldName.getText());
-            task.setDescription(jTextAreaDescription.getText());
-            task.setNotes(jTextAreaNotes.getText());
-            task.setCompleted(false);
+                task.setName(jTextFieldName.getText());
+                task.setDescription(jTextAreaDescription.getText());
+                task.setNotes(jTextAreaNotes.getText());
+                task.setCompleted(false);
 
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-            Date deadline = dateFormat.parse(jFormattedTextFieldDeadline.getText());
-            task.setDeadline(deadline);
-            controller.save(task);
-            JOptionPane.showMessageDialog(rootPane, "Tarefa salva com sucesso");
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                Date deadline = dateFormat.parse(jFormattedTextFieldDeadline.getText());
+                task.setDeadline(deadline);
+                controller.save(task);
+                JOptionPane.showMessageDialog(rootPane, "Tarefa salva com sucesso");
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "A tarefa não foi salva pois os campos [Nome] " +
+                        "e [Prazo] são obrigatórios");
+            }
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(rootPane, ex.getMessage());
         }
-        this.dispose();
     }//GEN-LAST:event_jLabelToolbarSaveMouseClicked
 
     /**
